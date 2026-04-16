@@ -1,0 +1,45 @@
+---
+const waveSvgData =
+  "%3Csvg%20width%3D%2233%22%20height%3D%22160%22%20viewBox%3D%220%200%2033%20160%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%3Cpath%20d%3D%22M0.154297%2080C-0.195449%2094.5207%205.08468%20109.152%2015.9932%20120.34L17.0068%20121.367C27.4879%20132.117%2032.7716%20146.045%2032.8594%20160H0V0H32.8594C32.9486%2014.1904%2027.6649%2028.4084%2017.0068%2039.3398L15.9932%2040.3672C5.2617%2051.3738%20-0.0217511%2065.7123%200.142578%2080H0.154297Z%22%20fill%3D%22%23F4E4C6%22%2F%3E%20%3C%2Fsvg%3E";
+---
+
+<div class="fixed z-[-1]">
+  <div class="fixed top-0 left-0 h-screen w-[15vw] bg-[#F4E4C6]"></div>
+  <div
+    class="fixed top-0 left-[14.5vw] w-16 h-screen opacity-40 z-0 pointer-events-none animate-wave-fast"
+    style={`
+        background-image: url('data:image/svg+xml;utf8,${waveSvgData}');
+        background-repeat: repeat-y;
+        background-position: left top;
+    `}
+  >
+  </div>
+  <div
+    class="fixed top-0 left-[15vw] w-16 h-screen z-0 pointer-events-none animate-wave-slow"
+    style={`
+        background-image: url('data:image/svg+xml;utf8,${waveSvgData}');
+        background-repeat: repeat-y;
+        background-position: left top;
+    `}
+  >
+  </div>
+</div>
+
+<style>
+  @keyframes slideUp {
+    0% {
+      background-position: left 0px;
+    }
+    100% {
+      background-position: left -160px;
+    }
+  }
+
+  /* .animate-wave-fast {
+    animation: slideUp 6s linear infinite;
+  }
+
+  .animate-wave-slow {
+    animation: slideUp 10s linear infinite;
+  } */
+</style>
