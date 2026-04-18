@@ -9,5 +9,12 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      allowedHosts: [
+        "wowazun.net",
+        "localhost",
+        "legendary-doing-easter-hardcover.trycloudflare.com",
+      ],
+    },
   },
 });
